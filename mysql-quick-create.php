@@ -53,6 +53,11 @@ $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-type: application/json'));
 $result = curl_exec($ch);
+
+// If CURL call fails, stop execution
+if (!$result) {
+    die('Unable to generate random password from passwd.me');
+}
 $decoded = json_decode($result);
 $password = $decoded->password;
 
