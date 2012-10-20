@@ -65,12 +65,13 @@ echo "Creating database ...\n";
 // Connect to database
 try {
     $pdo = new PDO('mysql:host=' . DB_HOST, DB_MASTER_USER, DB_MASTER_PASSWORD);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     die('Error connecting to database: ' . $e->getMessage());
 }
 
 $sql = 'CREATE DATABASE ' . $dbname
-     . ' CHARACTER SET utf-8 COLLATE utf8_general_ci';
+     . ' DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci';
 db_exec($pdo, $sql);
 
 
