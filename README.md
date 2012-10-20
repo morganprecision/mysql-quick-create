@@ -19,4 +19,4 @@ To use the script:
 2. Run this file in the CLI, and enter the database name and the user name
    you want.
 
-       `> php mysql-quick-create.php`
+       php mysql-quick-create.php
