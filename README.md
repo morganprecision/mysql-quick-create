@@ -6,6 +6,9 @@ MySQL database, creates a new user, and grants the user full access to the
 database. It also uses the API from passwd.me to generate a random password for
 the new user.
 
+This script is ideal to use when setting up a new WordPress installation on a
+development box.
+
 To use the script:
 
 1. Copy the config-sample.php file to config.php and replace the
