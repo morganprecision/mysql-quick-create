@@ -20,3 +20,6 @@ To use the script:
    you want.
 
        php mysql-quick-create.php
+
+NOTE: This script requires CURL to be setup with your installation of PHP (for
+obtaining the random password).
